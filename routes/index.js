@@ -6,6 +6,7 @@ let contentCollection = db.collection('content')
 /* GET home page. */
 router.get('/', async function(req, res, next) {
 let content = await contentCollection.get("content");
+console.log(content);
 if(content == null) {
     res.json({
       status: "fail"
